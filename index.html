@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.6rem;
+        }
+
+        h1,
+        p,
+        form {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+        }    
+
+        .botDefault {
+            background-image: url(./assets/defaultScene.png);
+            background-repeat: no-repeat;
+            /* background-size: contain; */
+            position: relative;
+        }
+
+        .peachBot {
+            position: absolute;
+            /* z-index: 10;
+            top: 140px;
+            left: 105px; */
+        }
+
+        /* .shades {
+            position: absolute;
+            z-index: 20;
+            top: 187px;
+            left: 165px;
+        } */
+
+        /* .nightScene {
+            position: absolute;
+        } */
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Title placholder</h1>
+            <p>Instructions placeholder...</p>
+        </div>
+    </header>
+    
+    <main>
+        <div class="wrapper">
+            
+            <section class="botInputs">
+                <h2>Select a colour:</h2>
+                <form class="colour" action="">
+                    <label for="mint" aria-label="Click to select a mint bot">Mint</label>
+                    <input class="selection mint" id="mint" type="checkbox" value="mint" aria-hidden="true">
+                    
+                    <label for="peach" aria-label="Click to select a peach bot">Peach</label>
+                    <input class="selection peach" id="peach" type="checkbox" value="peach" aria-hidden="true">
+                    
+                    <label for="violet" aria-label="Click to select a violet bot">Violet</label>
+                    <input class="selection violet" id="violet" type="checkbox" value="violet" aria-hidden="true">
+                    
+                    <label for="rose" aria-label="Click to select a rose bot">Rose</label>
+                    <input class="selection rose" id="rose" type="checkbox" value="rose" aria-hidden="true">
+                </form>
+                
+                <h2>Choose a scene:</h2>
+                <form class="scene" action="">
+                    <label for="day" aria-label="Click to switch to the day scene">Day</label>
+                    <input class="selection day" id="day" type="checkbox" value="day" aria-hidden="true">
+                    
+                    <label for="night" aria-label="Click to switch to the night scene">Night</label>
+                    <input class="selection night" id="night" type="checkbox" value="night" aria-hidden="true">
+                </form>
+                
+                <h2>Add some accessories:</h2>
+                <form action="accessories">
+                    <label for="topHat" aria-label="Click to put on a top hat">Top hat</label>
+                    <input class="selection" id="topHat" type="checkbox" value="topHat" aria-hidden="true">
+                    
+                    <label for="shades" aria-label="Click to wear some shades">Shades</label>
+                    <input class="selection" id="shades" type="checkbox" value="shades" aria-hidden="true">
+                    
+                    <label for="iceCream" aria-label="Click to hold an ice cream cone">Ice cream</label>
+                    <input class="selection" id="iceCream" type="checkbox" value="iceCream" aria-hidden="true">
+                    
+                    <label for="chain" aria-label="Click to wear a chain necklace">Gold chain</label>
+                    <input class="selection" id="chain" type="checkbox" value="chain" aria-hidden="true">
+
+                    <label for="shoes" aria-label="Click to put on a pair of shoes">Fresh kicks</label>
+                    <input class="selection" id="shoes" type="checkbox" value="shoes" aria-hidden="true">
+                </form>
+            </section>
+            
+            <section class="botDisplay">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <div class="botDefault">
+                    <div>
+                        <img class="peachBot" src="./assets/peachBot.png" alt="Pixelated peach robot">
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Created at <a class="footer-link" href="https://junocollege.com/" role="link">Juno College</a></p>
+        <p>Copyright &#169 2020 Juno College of Technology</p>
+    </footer>
+    
+</body>
+</html>
+
+<!-- Project Plan:
+
+    3 categories:
+Scene - day/night (mutually exclusive)
+Bot colour - peach/violet/rose/mind (mutually exclusive)
+Accessories - tophat/shades/chain/shoes/icecream (optional) -->
+
+<!-- Layout:
+HEADER
+h1
+button/link
+
+MAIN
+Section 1 - inputs
+h2 + p * 3
+form - input fields
+
+Section 2 - display
+default image
++ layered images on event
+
+FOOTER
+Juno copyright
+-->
