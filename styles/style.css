@@ -241,13 +241,20 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
 }
 
 h1,
+h2,
+h3,
 p,
 form {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -256,32 +263,288 @@ img {
   height: auto;
 }
 
+label {
+  display: inline-block;
+}
+
 .wrapper {
-  max-width: 1200px;
-  width: 90%;
+  max-width: 1250px;
+  width: 85%;
   margin: 0 auto;
 }
 
-.botDefault {
-  background-image: url(./assets/defaultScene.png);
+h1 {
+  font-family: "Passion One", cursive;
+  font-size: 6rem;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Passion One", cursive;
+  font-size: 4rem;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #acfaed;
+  text-transform: uppercase;
+}
+
+p {
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  line-height: 25px;
+  color: #FFF;
+}
+
+a.link,
+button {
+  background: #64d9c5;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+a.link:hover, a.link:focus,
+button:hover,
+button:focus {
+  color: #64d9c5;
+  background: #FFF;
+  border: #64d9c5 3px solid;
+}
+
+a.link {
+  font-weight: 700;
+  padding: 15px 20px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+form label {
+  font-size: 2.5rem;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+header {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #c4c4c4), color-stop(45%, #a1a1a1));
+  background: linear-gradient(90deg, #c4c4c4 60%, #a1a1a1 45%);
+}
+
+header .headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .headerContainer .headerBots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 50px;
+  width: 550px;
+}
+
+header .headerContainer .headerBots img {
+  width: 80%;
+}
+
+header .headerContainer .headerTopBorder {
+  border-bottom: #FFF 5px solid;
+  width: 900px;
+}
+
+header .headerContainer h1 {
+  padding-top: 50px;
+  text-align: right;
+}
+
+header .headerContainer p {
+  text-align: right;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 400px;
+  padding: 30px 0;
+}
+
+main {
+  height: 100%;
+  background: #a1a1a1;
+}
+
+main h2 {
+  text-align: center;
+  padding: 75px 0 50px 0;
+}
+
+main .mainContainer .botInputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 75px;
+  border-bottom: #FFF 5px solid;
+}
+
+main .mainContainer .botInputs h3 {
+  padding-bottom: 15px;
+}
+
+main .mainContainer .botInputs p {
+  padding-bottom: 20px;
+  border-bottom: solid #FFF 2px;
+}
+
+main .mainContainer .botInputs form {
+  padding-top: 50px;
+}
+
+main .mainContainer .botInputs form label {
+  margin: 20px 0;
+}
+
+main .mainContainer .botInputs .swatch,
+main .mainContainer .botInputs .scene,
+main .mainContainer .botInputs .swag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  min-width: 300px;
+  width: cacl(100%/3)-20px;
+}
+
+main .mainContainer .botDisplay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 75px;
+}
+
+main .mainContainer .botDisplay .botDefault {
+  background-image: url(../assets/defaultScene.png);
   background-repeat: no-repeat;
-  /* background-size: contain; */
+  background-size: contain;
+  height: 450px;
+  width: 800px;
   position: relative;
 }
 
-.peachBot {
+main .mainContainer .botDisplay .botDefault .mintBot,
+main .mainContainer .botDisplay .botDefault .peachBot,
+main .mainContainer .botDisplay .botDefault .roseBot,
+main .mainContainer .botDisplay .botDefault .violetBot {
+  width: 28.3%;
   position: absolute;
-  /* z-index: 10;
-    top: 140px;
-    left: 105px; */
+  bottom: 0px;
+  left: 22px;
+  z-index: 10;
 }
 
-/* .shades {
-    position: absolute;
-    z-index: 20;
-    top: 187px;
-    left: 165px;
-} */
-/* .nightScene {
-    position: absolute;
-} */
+main .mainContainer .botDisplay .botDefault .dayScene,
+main .mainContainer .botDisplay .botDefault .nightScene {
+  width: 92.5%;
+  position: absolute;
+  z-index: 5;
+}
+
+main .mainContainer .botDisplay .botDefault .swagTopHat {
+  width: 18%;
+  position: absolute;
+  bottom: 234px;
+  left: 62px;
+  z-index: 20;
+}
+
+main .mainContainer .botDisplay .botDefault .swagShades {
+  width: 11.8%;
+  position: absolute;
+  bottom: 200px;
+  left: 89px;
+  z-index: 30;
+}
+
+main .mainContainer .botDisplay .botDefault .swagIceCream {
+  width: 5.9%;
+  position: absolute;
+  bottom: 134px;
+  left: 216px;
+  z-index: 20;
+}
+
+main .mainContainer .botDisplay .botDefault .swagChain {
+  width: 12.25%;
+  position: absolute;
+  bottom: 130px;
+  left: 87px;
+  z-index: 20;
+}
+
+main .mainContainer .botDisplay .botDefault .swagShoes {
+  width: 19.3%;
+  position: absolute;
+  bottom: 0px;
+  left: 57px;
+  z-index: 20;
+}
+
+@media (max-width: 1300px) {
+  .mainContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mainContainer .botInput, .mainContainer .botDisplay {
+    width: 100%;
+  }
+  .mainContainer .botInput form, .mainContainer .botDisplay form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 880px) {
+  .mainContainer .botDisplay .botDetaulf {
+    height: 300px;
+    width: 500px;
+  }
+}

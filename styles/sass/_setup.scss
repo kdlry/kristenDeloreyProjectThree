@@ -14,17 +14,28 @@ html {
 
 body {
     font-size: 1.6rem;
+    font-family: $primaryFont;
 }
 
 h1,
+h2,
+h3,
 p,
 form {
     margin: 0;
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 img {
     width: 100%;
     display: block;
     height: auto;
+}
+
+label {
+    display: inline-block;
 }

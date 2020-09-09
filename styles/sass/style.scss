@@ -1,2 +1,12 @@
+//Variables and mixins ----------------------------
+$primaryFont: 'Roboto', sans-serif;
+$secondaryFont: 'Passion One', cursive;
+
+
+
+//Partials ----------------------------
 @import 'setup';
 @import 'global';
+@import 'media';
+
+
