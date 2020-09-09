@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
 
-    <link rel="stylesheet" href="./styles/style.css">
+    <link href="./styles/style.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,23 +53,23 @@
                         <h3>swatch</h3>
                         <p>Select a colour</p>
                         <form action="">
-                            <div>
-                                <input class="selection mint" id="mint" type="radio" value="mint" name="bot" aria-hidden="true">
-                                <label for="mint" aria-label="Click to select a mint bot">mint</label>
+                            <div class="container">
+                                <input class="radio mint" id="mint" type="radio" value="mint" name="bot" aria-hidden="true">
+                                <label for="mint" aria-label="Click to select a mint bot"><span class="radio"></span>mint</label>
                             </div>
-                            <div>
-                                <input class="selection peach" id="peach" type="radio" value="peach" name="bot" aria-hidden="true">
-                                <label for="peach" aria-label="Click to select a peach bot">peach</label>
-                            </div>
-                            
-                            <div>
-                                <input class="selection violet" id="violet" type="radio" value="violet" name="bot" aria-hidden="true">
-                                <label for="violet" aria-label="Click to select a violet bot">violet</label>
+                            <div class="container">
+                                <input class="radio peach" id="peach" type="radio" value="peach" name="bot" aria-hidden="true">
+                                <label for="peach" aria-label="Click to select a peach bot"><span class="radio"></span>peach</label>
                             </div>
                             
-                            <div>
-                                <input class="selection rose" id="rose" type="radio" value="rose" name="bot" aria-hidden="true">
-                                <label for="rose" aria-label="Click to select a rose bot">rose</label>
+                            <div class="container">
+                                <input class="radio violet" id="violet" type="radio" value="violet" name="bot" aria-hidden="true">
+                                <label for="violet" aria-label="Click to select a violet bot"><span class="radio"></span>violet</label>
+                            </div>
+                            
+                            <div class="container">
+                                <input class="radio rose" id="rose" type="radio" value="rose" name="bot" aria-hidden="true">
+                                <label for="rose" aria-label="Click to select a rose bot"><span class="radio"></span>rose</label>
                             </div>
                         </form>
                     </div>
@@ -76,14 +78,14 @@
                         <h3>scene</h3>
                         <p>Choose a scene</p>
                         <form action="">
-                            <div>
-                                <input class="selection day" id="day" type="radio" value="day" name="scene" aria-hidden="true">    
-                                <label for="day" aria-label="Click to switch to the day scene">day</label>
+                            <div class="container">
+                                <input class="radio day" id="day" type="radio" value="day" name="scene" aria-hidden="true">    
+                                <label for="day" aria-label="Click to switch to the day scene"><span class="radio"></span>day</label>
                             </div>
         
-                            <div>
-                                <input class="selection night" id="night" type="radio" value="night" name="scene" aria-hidden="true">
-                                <label for="night" aria-label="Click to switch to the night scene">night</label>
+                            <div class="container">
+                                <input class="radio night" id="night" type="radio" value="night" name="scene" aria-hidden="true">
+                                <label for="night" aria-label="Click to switch to the night scene"><span class="radio"></span>night</label>
                             </div>
                         </form>
 
@@ -93,29 +95,29 @@
                         <h3>swag</h3>
                         <p>Add swag</p>
                         <form action="">
-                            <div>
-                                <input class="selection" id="topHat" type="checkbox" value="topHat" aria-hidden="true">
-                                <label for="topHat" aria-label="Click to put on a top hat">top hat</label>
+                            <div class="container">
+                                <input class="checkbox" id="topHat" type="checkbox" value="topHat" aria-hidden="true">
+                                <label for="topHat" aria-label="Click to put on a top hat"><span class="checkbox"></span>top hat</label>
                             </div>
                             
-                            <div>
-                                <input class="selection" id="shades" type="checkbox" value="shades" aria-hidden="true">
-                                <label for="shades" aria-label="Click to wear some shades">shades</label>
+                            <div class="container">
+                                <input class="checkbox" id="shades" type="checkbox" value="shades" aria-hidden="true">
+                                <label for="shades" aria-label="Click to wear some shades"><span class="checkbox"></span>shades</label>
                             </div>
                             
-                            <div>
-                                <input class="selection" id="iceCream" type="checkbox" value="iceCream" aria-hidden="true">
-                                <label for="iceCream" aria-label="Click to hold an ice cream cone">ice cream</label>
+                            <div class="container">
+                                <input class="checkbox" id="iceCream" type="checkbox" value="iceCream" aria-hidden="true">
+                                <label for="iceCream" aria-label="Click to hold an ice cream cone"><span class="checkbox"></span>ice cream</label>
                             </div>
                             
-                            <div>
-                                <input class="selection" id="chain" type="checkbox" value="chain" aria-hidden="true">
-                                <label for="chain" aria-label="Click to wear a chain necklace">gold chain</label>
+                            <div class="container">
+                                <input class="checkbox" id="chain" type="checkbox" value="chain" aria-hidden="true">
+                                <label for="chain" aria-label="Click to wear a chain necklace"><span class="checkbox"></span>gold chain</label>
                             </div>
         
-                            <div>
-                                <input class="selection" id="shoes" type="checkbox" value="shoes" aria-hidden="true">
-                                <label for="shoes" aria-label="Click to put on a pair of shoes">fresh kicks</label>
+                            <div class="container">
+                                <input class="checkbox" id="shoes" type="checkbox" value="shoes" aria-hidden="true">
+                                <label for="shoes" aria-label="Click to put on a pair of shoes"><span class="checkbox"></span>fresh kicks</label>
                             </div>
                     </div>
 

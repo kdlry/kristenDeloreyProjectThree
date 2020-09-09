@@ -242,6 +242,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
+  color: #FFF;
 }
 
 h1,
@@ -276,21 +277,19 @@ label {
 h1 {
   font-family: "Passion One", cursive;
   font-size: 6rem;
-  color: #FFF;
   text-transform: uppercase;
 }
 
 h2 {
   font-family: "Passion One", cursive;
-  font-size: 4rem;
-  color: #FFF;
+  font-size: 5rem;
   text-transform: uppercase;
 }
 
 h3 {
   font-size: 5rem;
   font-weight: 700;
-  color: #acfaed;
+  color: #64d9c5;
   text-transform: uppercase;
 }
 
@@ -299,13 +298,11 @@ p {
   font-size: 2rem;
   letter-spacing: 3px;
   line-height: 25px;
-  color: #FFF;
 }
 
 a.link,
 button {
   background: #64d9c5;
-  color: #FFF;
   text-transform: uppercase;
 }
 
@@ -319,22 +316,96 @@ button:focus {
 
 a.link {
   font-weight: 700;
+  color: #FFF;
   padding: 15px 20px;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
-form input[type="checkbox"],
-form input[type="radio"] {
-  opacity: 0;
-  position: fixed;
-  width: 0;
+/* Base styles for spans */
+label {
+  font-size: 2.2rem;
 }
 
-form label {
-  font-size: 2.5rem;
-  color: #FFF;
-  text-transform: uppercase;
+input[type="radio"],
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+.container {
+  margin-bottom: 10px;
+}
+
+.container label {
+  position: relative;
+}
+
+.container span::before,
+.container span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* Radio buttons */
+.container span.radio:hover {
+  cursor: pointer;
+}
+
+.container span.radio::before {
+  left: -52px;
+  width: 45px;
+  height: 25px;
+  background-color: #6C788A;
+  border-radius: 50px;
+}
+
+.container span.radio::after {
+  left: -49px;
+  width: 17px;
+  height: 17px;
+  border-radius: 10px;
+  background-color: #6C788A;
+  -webkit-transition: left .25s, background-color .25s;
+  transition: left .25s, background-color .25s;
+}
+
+.container input[type="radio"]:checked + label span.radio::after {
+  left: -27px;
+  background-color: #64d9c5;
+}
+
+/* Check-boxes */
+.container span.checkbox::before {
+  width: 27px;
+  height: 27px;
+  background-color: #6C788A;
+  left: -35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid transparent;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
+}
+
+.container span.checkbox:hover::before {
+  border: 3px solid #FFF;
+}
+
+.container span.checkbox::after {
+  content: '\f00c';
+  font-family: 'FontAwesome';
+  left: -31px;
+  top: 2px;
+  color: transparent;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+input[type="checkbox"]:checked + label span.checkbox::after {
+  color: #64d9c5;
 }
 
 header {
@@ -389,7 +460,7 @@ header .headerContainer p {
 
 main {
   height: 100%;
-  background: #a1a1a1;
+  background: #636578;
 }
 
 main h2 {
