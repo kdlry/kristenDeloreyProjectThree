@@ -333,18 +333,10 @@ a.link3:focus {
   margin-top: 75px;
 }
 
-.displayLink a.link3 {
-  margin-bottom: 75px;
-}
-
 .displayLink a.link2 span,
 .displayLink a.link3 span {
   padding-left: 10px;
   font-size: 2rem;
-}
-
-a.link2 {
-  text-align: center;
 }
 
 .botInputs input[type="radio"],
@@ -438,15 +430,16 @@ footer {
 
 footer p {
   text-align: center;
+  color: dimgrey;
 }
 
 footer a {
-  color: darkgreen;
+  color: #EA593E;
   text-align: center;
 }
 
 footer a:hover, footer a:focus {
-  border-bottom: yellow dotted 2px;
+  border-bottom: #EA593E solid 2px;
 }
 
 header {
@@ -504,6 +497,10 @@ main {
   background: #636578;
 }
 
+main .mainContainer {
+  padding-bottom: 75px;
+}
+
 main .mainContainer .mainIntro {
   padding: 100px 0;
 }
@@ -512,17 +509,13 @@ main .mainContainer .mainIntro p {
   padding: 50px 0;
 }
 
-main .mainContainer .mainIntro a {
-  margin-bottom: 75px;
+main .mainContainer .displayContainer {
+  border: lightgrey 5px solid;
+  background: steelblue;
+  padding: 50px 0;
 }
 
-main .mainContainer .mainIntro .mainBorder {
-  border-bottom: #FFF 3px solid;
-  width: -80%;
-  margin-left: 20%;
-}
-
-main .mainContainer .botDisplay {
+main .mainContainer .displayContainer .botDisplay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -532,21 +525,15 @@ main .mainContainer .botDisplay {
           flex-direction: column;
 }
 
-main .mainContainer .botDisplay .botDefault {
-  background-image: url(../assets/defaultScene.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 490px;
-  width: 750px;
+main .mainContainer .displayContainer .botDisplay .botDefault {
   margin: 0 auto;
   position: relative;
-  border: lightblue 8px solid;
 }
 
-main .mainContainer .botDisplay .botDefault .mintBot,
-main .mainContainer .botDisplay .botDefault .peachBot,
-main .mainContainer .botDisplay .botDefault .roseBot,
-main .mainContainer .botDisplay .botDefault .violetBot {
+main .mainContainer .displayContainer .botDisplay .botDefault .mintBot,
+main .mainContainer .displayContainer .botDisplay .botDefault .peachBot,
+main .mainContainer .displayContainer .botDisplay .botDefault .roseBot,
+main .mainContainer .displayContainer .botDisplay .botDefault .violetBot {
   width: 30%;
   left: 22px;
   bottom: 33px;
@@ -554,14 +541,14 @@ main .mainContainer .botDisplay .botDefault .violetBot {
   z-index: 10;
 }
 
-main .mainContainer .botDisplay .botDefault .dayScene,
-main .mainContainer .botDisplay .botDefault .nightScene {
+main .mainContainer .displayContainer .botDisplay .botDefault .dayScene,
+main .mainContainer .displayContainer .botDisplay .botDefault .nightScene {
   width: 100%;
   position: absolute;
   z-index: 5;
 }
 
-main .mainContainer .botDisplay .botDefault .swagTopHat {
+main .mainContainer .displayContainer .botDisplay .botDefault .swagTopHat {
   width: 19%;
   left: 65px;
   bottom: 268px;
@@ -569,7 +556,7 @@ main .mainContainer .botDisplay .botDefault .swagTopHat {
   z-index: 20;
 }
 
-main .mainContainer .botDisplay .botDefault .swagShades {
+main .mainContainer .displayContainer .botDisplay .botDefault .swagShades {
   width: 12.8%;
   left: 88px;
   bottom: 230px;
@@ -577,7 +564,7 @@ main .mainContainer .botDisplay .botDefault .swagShades {
   z-index: 30;
 }
 
-main .mainContainer .botDisplay .botDefault .swagIceCream {
+main .mainContainer .displayContainer .botDisplay .botDefault .swagIceCream {
   width: 6.2%;
   left: 216px;
   bottom: 168px;
@@ -585,7 +572,7 @@ main .mainContainer .botDisplay .botDefault .swagIceCream {
   z-index: 20;
 }
 
-main .mainContainer .botDisplay .botDefault .swagChain {
+main .mainContainer .displayContainer .botDisplay .botDefault .swagChain {
   width: 12.4%;
   left: 91px;
   bottom: 166px;
@@ -593,12 +580,21 @@ main .mainContainer .botDisplay .botDefault .swagChain {
   z-index: 20;
 }
 
-main .mainContainer .botDisplay .botDefault .swagShoes {
+main .mainContainer .displayContainer .botDisplay .botDefault .swagShoes {
   width: 21.3%;
   left: 54px;
   bottom: 32px;
   position: absolute;
   z-index: 20;
+}
+
+main .mainContainer .displayContainer .botDisplay .botDefault .default {
+  width: 750px;
+  left: 54px;
+  bottom: 32px;
+  position: absolute;
+  height: 490px;
+  border: grey 5px solid;
 }
 
 main .mainContainer .botInputs {
@@ -607,10 +603,9 @@ main .mainContainer .botInputs {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 75px 0 50px 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 75px;
 }
 
 main .mainContainer .botInputs h3 {
