@@ -525,76 +525,72 @@ main .mainContainer .displayContainer .botDisplay {
           flex-direction: column;
 }
 
-main .mainContainer .displayContainer .botDisplay .botDefault {
+main .mainContainer .displayContainer .botDisplay .botImages {
+  border: black 4px solid;
   margin: 0 auto;
   position: relative;
 }
 
-main .mainContainer .displayContainer .botDisplay .botDefault .mintBot,
-main .mainContainer .displayContainer .botDisplay .botDefault .peachBot,
-main .mainContainer .displayContainer .botDisplay .botDefault .roseBot,
-main .mainContainer .displayContainer .botDisplay .botDefault .violetBot {
-  width: 30%;
-  left: 22px;
-  bottom: 33px;
+main .mainContainer .displayContainer .botDisplay .botImages .mintBot,
+main .mainContainer .displayContainer .botDisplay .botImages .peachBot,
+main .mainContainer .displayContainer .botDisplay .botImages .roseBot,
+main .mainContainer .displayContainer .botDisplay .botImages .violetBot {
+  width: 30.5%;
+  left: 19px;
+  bottom: 0px;
   position: absolute;
   z-index: 10;
 }
 
-main .mainContainer .displayContainer .botDisplay .botDefault .dayScene,
-main .mainContainer .displayContainer .botDisplay .botDefault .nightScene {
+main .mainContainer .displayContainer .botDisplay .botImages .dayScene,
+main .mainContainer .displayContainer .botDisplay .botImages .nightScene {
   width: 100%;
   position: absolute;
   z-index: 5;
 }
 
-main .mainContainer .displayContainer .botDisplay .botDefault .swagTopHat {
-  width: 19%;
-  left: 65px;
-  bottom: 268px;
+main .mainContainer .displayContainer .botDisplay .botImages .swagTopHat {
+  width: 18.5%;
+  left: 58px;
+  bottom: 200px;
   position: absolute;
   z-index: 20;
 }
 
-main .mainContainer .displayContainer .botDisplay .botDefault .swagShades {
+main .mainContainer .displayContainer .botDisplay .botImages .swagShades {
   width: 12.8%;
-  left: 88px;
-  bottom: 230px;
+  left: 75px;
+  bottom: 170px;
   position: absolute;
   z-index: 30;
 }
 
-main .mainContainer .displayContainer .botDisplay .botDefault .swagIceCream {
-  width: 6.2%;
-  left: 216px;
-  bottom: 168px;
+main .mainContainer .displayContainer .botDisplay .botImages .swagIceCream {
+  width: 5.8%;
+  left: 180px;
+  bottom: 116px;
   position: absolute;
   z-index: 20;
 }
 
-main .mainContainer .displayContainer .botDisplay .botDefault .swagChain {
-  width: 12.4%;
-  left: 91px;
-  bottom: 166px;
+main .mainContainer .displayContainer .botDisplay .botImages .swagChain {
+  width: 12.5%;
+  left: 76px;
+  bottom: 111px;
   position: absolute;
   z-index: 20;
 }
 
-main .mainContainer .displayContainer .botDisplay .botDefault .swagShoes {
-  width: 21.3%;
-  left: 54px;
-  bottom: 32px;
+main .mainContainer .displayContainer .botDisplay .botImages .swagShoes {
+  width: 21%;
+  left: 48px;
+  bottom: 0px;
   position: absolute;
   z-index: 20;
 }
 
-main .mainContainer .displayContainer .botDisplay .botDefault .default {
-  width: 750px;
-  left: 54px;
-  bottom: 32px;
-  position: absolute;
-  height: 490px;
-  border: grey 5px solid;
+main .mainContainer .displayContainer .botDisplay .botImages .default {
+  border: grey 4px solid;
 }
 
 main .mainContainer .botInputs {
@@ -643,6 +639,7 @@ main .mainContainer .botInputs form .container {
 
 main .mainContainer .botInputs form .container label {
   margin: 20px 0;
+  padding-left: 10px;
 }
 
 @media (max-width: 1300px) {

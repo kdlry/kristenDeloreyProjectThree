@@ -265,12 +265,13 @@ main {
                 // align-items: center;
     
     
-                .botDefault {
+                .botImages {
                     // background-image: url(../assets/defaultScene.png);
                     // background-repeat: no-repeat;
                     // background-size: contain;
                     // height: 490px;
                     // width: 750px;
+                    border: black 4px solid;
                     margin: 0 auto;
                     position: relative;
                     
@@ -279,7 +280,7 @@ main {
                     .peachBot,
                     .roseBot,
                     .violetBot {
-                        @include imgs(30%, 22px, 33px);
+                        @include imgs(30.5%, 19px, 0px);
                         z-index: 10; 
                     }
         
@@ -291,34 +292,34 @@ main {
                     }
         
                     .swagTopHat {
-                        @include imgs(19%, 65px, 268px);
+                        @include imgs(18.5%, 58px, 200px);
                         z-index: 20; 
                     }
         
                     .swagShades {
-                        @include imgs(12.8%,88px, 230px);
+                        @include imgs(12.8%, 75px, 170px);
                         z-index: 30;
                     }
                     
                     .swagIceCream {
-                        @include imgs(6.2%, 216px, 168px);
+                        @include imgs(5.8%, 180px, 116px);
                         z-index: 20;
                     }
                     
                     .swagChain {
-                        @include imgs(12.4%, 91px, 166px);
+                        @include imgs(12.5%, 76px, 111px);
                         z-index: 20;
                     }
                     
                     .swagShoes {
-                        @include imgs(21.3%, 54px, 32px); 
+                        @include imgs(21%, 48px, 0px); 
                         z-index: 20;
                     }
     
                     .default {
-                        @include imgs(750px, 54px, 32px); 
-                        height: 490px;
-                        border: grey 5px solid;
+                        // @include imgs(950px, 54px, 32px); 
+                        // height: 600px;
+                        border: grey 4px solid;
                     }
                 }
             }
@@ -359,6 +360,7 @@ main {
                 
                     label {
                         margin: 20px 0;
+                        padding-left: 10px;
                     }
                 }
             }
