@@ -543,7 +543,8 @@ main .mainContainer .displayContainer .botDisplay .botImages .violetBot {
 }
 
 main .mainContainer .displayContainer .botDisplay .botImages .dayScene,
-main .mainContainer .displayContainer .botDisplay .botImages .nightScene {
+main .mainContainer .displayContainer .botDisplay .botImages .nightScene,
+main .mainContainer .displayContainer .botDisplay .botImages .rainScene {
   width: 100%;
   position: absolute;
   z-index: 5;
