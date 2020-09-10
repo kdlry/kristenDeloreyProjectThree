@@ -1,18 +1,24 @@
 //Variables and mixins ----------------------------
 //Colour -----
-$primaryFont: 'Roboto', sans-serif;
-$secondaryFont: 'Passion One', cursive;
+$primaryFont: 'Roboto Slab', serif;
+$secondaryFont: 'Francois One', sans-serif;
 
 //Colour -----
 $darkBackgroundColour: #a1a1a1;
 $lightBackgroundColour: #c4c4c4;
 $mainBackgroundColour: #636578;
 $primaryColour: #FFF;
-$secondaryColour: #64d9c5;
-$linkColour: #64d9c5;
+$secondaryColour: #8BBCFF;
+$linkColour: #8BBCFF;
 $formInputBackground: #6C788A;
 
-
+//Images -----
+@mixin imgs($width, $left, $bottom) {
+    width: $width;
+    left: $left;
+    bottom: $bottom;
+    position: absolute;
+}
 
 
 //Partials ----------------------------
