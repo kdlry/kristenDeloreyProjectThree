@@ -93,6 +93,10 @@ footer a {
         visibility: visible;
         opacity: 0;
     }
+
+    // input:disabled + label {
+    //     color: darkgrey;
+    // }
     
     input[type="radio"]:checked + label span.radio::after {
         left: -27px;
@@ -353,18 +357,23 @@ main {
             .swag {
                 display: flex;
                 flex-direction: column;
-                // min-width: 300px;
-                // max-width: 350px;
+                min-width: 250px;
+                width: 300px;
                 text-align: left;
                 padding-bottom: 50px;
+                padding-right: 50px;
             }
+
+            // form {
+            //     // min-width: 300px;
+            //     // max-width: 350px;
+            // }
 
             .radioForm {
                 display: flex;
                 flex-direction: column;
                 padding: 10px 0 0 50px;
-                // min-width: 300px;
-                // max-width: 350px;
+                
 
                 label {
                     margin: 20px 0;
@@ -392,8 +401,36 @@ footer {
     padding: 20px 0;
 }
 
-//JS styles ----------------------------
+// Sweet alert styles ----------------------------
+// Alert styles
+.swal-title,
+.swal-button{
+    font-weight: 300;
+}
 
+// change size of title
+.swal-title{
+    font-size: 2.4rem;
+}
+
+// the button styles
+.swal-button{
+    // @include buttonStyles(1.6rem, 120px);
+    border-radius: 0;
+}
+
+// change the colour of the buttons
+// .swal-button:not([disabled]):hover,
+// .swal-button:not([disabled]):focus{
+//     @include buttonHover;
+// }
+
+// center the button | change spacing around it
+.swal-footer{
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+}
 
 
 

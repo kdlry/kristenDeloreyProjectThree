@@ -644,8 +644,11 @@ main .mainContainer .botInputs .swag {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-width: 250px;
+  width: 300px;
   text-align: left;
   padding-bottom: 50px;
+  padding-right: 50px;
 }
 
 main .mainContainer .botInputs .radioForm {
@@ -678,6 +681,25 @@ main .mainContainer .botInputs .checkboxForm label {
 footer {
   background-color: lightblue;
   padding: 20px 0;
+}
+
+.swal-title,
+.swal-button {
+  font-weight: 300;
+}
+
+.swal-title {
+  font-size: 2.4rem;
+}
+
+.swal-button {
+  border-radius: 0;
+}
+
+.swal-footer {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 @media (max-width: 1300px) {
