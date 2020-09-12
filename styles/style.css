@@ -368,6 +368,10 @@ footer a:hover, footer a:focus {
   opacity: 0;
 }
 
+.botInputs input:disabled + label {
+  color: darkgrey;
+}
+
 .botInputs input[type="radio"]:checked + label span.radio::after {
   left: -27px;
   background-color: #66f2db;
@@ -683,17 +687,29 @@ footer {
   padding: 20px 0;
 }
 
-.swal-title,
-.swal-button {
-  font-weight: 300;
-}
-
 .swal-title {
-  font-size: 2.4rem;
+  font-size: 2rem;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400px;
 }
 
 .swal-button {
-  border-radius: 0;
+  background: #66f2db;
+  letter-spacing: 3px;
+  font-weight: 700;
+  padding: 15px 20px;
+}
+
+.swal-button:hover, .swal-button:focus {
+  color: #5accb9;
+  background: #FFF;
+  border: #5accb9 3px solid;
+}
+
+.swal-button:not([disabled]):hover,
+.swal-button:not([disabled]):focus {
+  background-color: #66f2db;
+  cursor: pointer;
 }
 
 .swal-footer {

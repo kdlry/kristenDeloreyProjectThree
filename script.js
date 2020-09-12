@@ -8,7 +8,7 @@ const botUserInput = {};
 // Create function to display images based on user input
 botUserInput.showInput = function() {
 
-    // Bind event listener that looks for a change on form inputs
+    // Bind event listener that looks for a change on all form inputs
     $('input').on('change', function(){
     
         // Create variable that stores selected input with an id
@@ -25,32 +25,36 @@ botUserInput.showInput = function() {
     }); 
 }
 
-botUserInput.activateSwag = function() {   
-    // Bind event listener that looks for a change on form inputs
+// Create function that enables swag inputs once a swatch has been selected
+botUserInput.enableSwag = function() {   
+    
+    // Bind event listener that looks for a change on swatch inputs
     $('.swatch input').on('change', function(){
     
-    $('.swag input').prop('disabled', false);
+        // When change is made on a swatch input, enable swag inputs
+        $('.swag input').prop('disabled', false);
         
     });
 }
 
-botUserInput.activateError = function () {
+// Create function that activates modal when swag inputs are selected before a swatch has been selected
+botUserInput.activateAlert = function () {
     
-    // Bind event listener that looks for a change on form inputs
+    // Bind event listener that looks for a click on swag inputs
     $('.swag label').on('click', function () {
-    // console.log('swag clicked');
 
-        // console.log($('.swag input').attr('disabled'))
+        // When a swag input is clicked on, activate (call) modal function
         if ($('.swag input').prop('disabled') === true) {
-            alert('oops!')
+            // alert('oops!')
+            
+            swal({
+                title: 'You need a bot to rock the swag!',
+                button: 'Fine.',
+            });
         }
-
     });
 };
 
-// botUserInput.popUp = function() {
-
-// }
 
 // Create function to download selected input 
 // botUserInput.downloadImg = function () {
@@ -62,8 +66,8 @@ botUserInput.activateError = function () {
 // Initializing function
 botUserInput.init = function() {
     botUserInput.showInput();
-    botUserInput.activateSwag();
-    botUserInput.activateError();
+    botUserInput.enableSwag();
+    botUserInput.activateAlert();
 }
 
 // Document ready

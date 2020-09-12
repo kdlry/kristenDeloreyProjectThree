@@ -94,9 +94,9 @@ footer a {
         opacity: 0;
     }
 
-    // input:disabled + label {
-    //     color: darkgrey;
-    // }
+    input:disabled + label {
+        color: darkgrey;
+    }
     
     input[type="radio"]:checked + label span.radio::after {
         left: -27px;
@@ -402,28 +402,35 @@ footer {
 }
 
 // Sweet alert styles ----------------------------
-// Alert styles
-.swal-title,
-.swal-button{
-    font-weight: 300;
-}
 
-// change size of title
+// Swal title-----
 .swal-title{
-    font-size: 2.4rem;
+    font-size: 2rem;
+    font-family: $primaryFont;
+    font-weight: 400px;
 }
 
-// the button styles
+// Swal button-----
 .swal-button{
-    // @include buttonStyles(1.6rem, 120px);
-    border-radius: 0;
+    background: $secondaryColour;
+    letter-spacing: 3px;
+    font-weight: 700;
+    // color: $primaryColour;
+    padding: 15px 20px;
+
+    &:hover, &:focus {
+        color: $linkColour;
+        background: $primaryColour;
+        border: $linkColour 3px solid;
+    }
 }
 
 // change the colour of the buttons
-// .swal-button:not([disabled]):hover,
-// .swal-button:not([disabled]):focus{
-//     @include buttonHover;
-// }
+.swal-button:not([disabled]):hover,
+.swal-button:not([disabled]):focus{
+    background-color: $secondaryColour;
+    cursor: pointer;
+}
 
 // center the button | change spacing around it
 .swal-footer{
