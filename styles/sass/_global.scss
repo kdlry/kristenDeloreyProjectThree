@@ -1,3 +1,4 @@
+//Top level styles ----------------------------
 .wrapper {
     max-width: 1250px;
     width: 85%;
@@ -30,11 +31,21 @@ p {
     line-height: 26px;
 }
 
+footer p {
+    text-align: center;
+    color: dimgrey;
+}
+
+p.smallTxt {
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+
 a.link,
 a.link2,
 a.link3 {
     background: $linkColour;
-    font-family: $secondaryFont;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 700;
@@ -56,30 +67,30 @@ a.link3 {
         margin-top: 75px;
     }
 
-    // a.link3 {
-    //     margin-bottom: 50px;
-    // }
-
     a.link2 span,
     a.link3 span {
         padding-left: 10px;
         font-size: 2rem;
     }
-
-
 }
-// a.link2,  {
-//     text-align: center;
-//     // padding-top: 75px;
-//     span {
-        
-//     }
-// }
 
+footer a {
+    color: #EA593E;
+    text-align: center;
+    font-style: italic;
+
+    &:hover, &:focus {
+        border-bottom: #EA593E solid 2px;
+    }
+}
+
+
+//Input styles ----------------------------
 // Code reference for radio/checkbox styling: https://www.templatemonster.com/blog/style-checkboxes-radio-buttons-css/
 .botInputs {
     input[type="radio"],
     input[type="checkbox"]{
+        visibility: visible;
         opacity: 0;
     }
     
@@ -92,101 +103,85 @@ a.link3 {
         color: $secondaryColour;
     }
 
-    .container {
-        margin-bottom: 10px;
+    input[type=checkbox]:focus + label,
+    input[type=radio]:focus + label {
+        border: 3px solid $lightBackgroundColour;
+        border-radius: 5px;
+        padding: 2px;
+    }
+
+
+    label {
+        font-size: 2.2rem;
+        position: relative;
         
-    
-        label {
-            font-size: 2.2rem;
-            position: relative;
-            
-            // Base styling-----
-            span::before, 
-            span::after { 
-                content: '';
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                margin: auto;
+        // Base styling-----
+        span::before, 
+        span::after { 
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        
+        // Radio buttons-----
+        span.radio {
+            &::before {
+                left: -52px;
+                width: 45px;
+                height: 25px;
+                background-color: $formInputBackground;
+                border-radius: 50px;
+            }
+
+            &:hover::before {
+                border: 3px solid $lightBackgroundColour;
+            }
+
+            &::after {
+                left: -49px;
+                width: 17px;
+                height: 17px;
+                border-radius: 10px;
+                background-color: $formInputBackground;
+                transition: left .25s, background-color .25s;
+            }     
+
+            &:hover {
+                cursor: pointer;
+            }
+        }  
+
+        //Checkboxes -----
+        span.checkbox {
+            &::before {
+                width: 27px;
+                height: 27px;
+                background-color: $formInputBackground;
+                left: -35px;
+                box-sizing: border-box;
+                border: 3px solid transparent;
+                transition: border-color .2s;
             }
             
-            // Radio buttons-----
-            span.radio {
-                &::before {
-                    left: -52px;
-                    width: 45px;
-                    height: 25px;
-                    background-color: $formInputBackground;
-                    border-radius: 50px;
-                }
+            &:hover::before {
+                border: 3px solid $lightBackgroundColour;
+            }
 
-                &:hover::before {
-                    border: 3px solid $lightBackgroundColour;
-                }
-    
-                &::after {
-                    left: -49px;
-                    width: 17px;
-                    height: 17px;
-                    border-radius: 10px;
-                    background-color: $formInputBackground;
-                    transition: left .25s, background-color .25s;
-                }     
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }  
-    
-            //Checkboxes -----
-            span.checkbox {
-                &::before {
-                    width: 27px;
-                    height: 27px;
-                    background-color: $formInputBackground;
-                    left: -35px;
-                    box-sizing: border-box;
-                    border: 3px solid transparent;
-                    transition: border-color .2s;
-                }
-                
-                &:hover::before {
-                    border: 3px solid $lightBackgroundColour;
-                }
-    
-                &::after {
-                    content: '\f00c';
-                    font-family: 'FontAwesome';
-                    left: -32px;
-                    top: 0px;
-                    color: transparent;
-                    transition: color .2s;
-                }
+            &::after {
+                content: '\f00c';
+                font-family: 'FontAwesome';
+                left: -32px;
+                top: 0px;
+                color: transparent;
+                transition: color .2s;
             }
         }
     }
 }
 
-footer {
-    background-color: lightblue;
-    padding: 20px 0;
-
-    p {
-        text-align: center;
-        color: dimgrey;
-    }
-
-    a {
-        color: #EA593E;
-        text-align: center;
-
-        &:hover, &:focus {
-            border-bottom: #EA593E solid 2px;
-        }
-    }
-}
-
-
+//Header styles ----------------------------
 header {
     height: 100vh;
     // background: linear-gradient(90deg, $lightBackgroundColour 60%, $darkBackgroundColour 45%);
@@ -228,6 +223,7 @@ header {
     }
 }
 
+//Main styles ----------------------------
 main {
     height: 100%;
     background: $mainBackgroundColour;
@@ -256,7 +252,7 @@ main {
 
         .displayContainer {
             border: lightgrey 5px solid;
-            background: steelblue;
+            background: rgb(102, 102, 102);
             padding: 50px 0;
 
             .botDisplay {
@@ -271,56 +267,67 @@ main {
                     // background-size: contain;
                     // height: 490px;
                     // width: 750px;
-                    border: black 4px solid;
+                    border:  lightgray 4px solid;
                     margin: 0 auto;
                     position: relative;
                     
-                    
-                    .mintBot,
-                    .peachBot,
+                    .violetBot,
                     .roseBot,
-                    .violetBot {
+                    .peachBot,
+                    .mintBot {
                         @include imgs(30.5%, 19px, 0px);
-                        z-index: 10; 
+                        z-index: 10;
+                        display: none;
                     }
-        
-                    .dayScene,
+
+                    .rainScene,
                     .nightScene,
-                    .rainScene {
+                    .dayScene {
                         width: 100%;
                         position: absolute;
                         z-index: 5;
+                        display: none;
                     }
         
                     .swagTopHat {
                         @include imgs(18.5%, 58px, 200px);
-                        z-index: 20; 
+                        z-index: 20;
+                        display: none;
                     }
         
                     .swagShades {
                         @include imgs(12.8%, 75px, 170px);
                         z-index: 30;
+                        display: none;
                     }
                     
                     .swagIceCream {
                         @include imgs(5.8%, 180px, 116px);
                         z-index: 20;
+                        display: none;
                     }
                     
                     .swagChain {
                         @include imgs(12.5%, 76px, 111px);
                         z-index: 20;
+                        display: none;
                     }
                     
                     .swagShoes {
                         @include imgs(21%, 48px, 0px); 
                         z-index: 20;
+                        display: none;
                     }
     
                     .default {
                         // @include imgs(950px, 54px, 32px); 
                         // height: 600px;
                         border: grey 4px solid;
+                        z-index: 1;
+                    }    
+
+                    .show {
+                        display: block;
                     }
                 }
             }
@@ -346,25 +353,47 @@ main {
             .swag {
                 display: flex;
                 flex-direction: column;
-                min-width: 300px;
-                max-width: 350px;
+                // min-width: 300px;
+                // max-width: 350px;
                 text-align: left;
                 padding-bottom: 50px;
+            }
 
+            .radioForm {
+                display: flex;
+                flex-direction: column;
+                padding: 10px 0 0 50px;
+                // min-width: 300px;
+                // max-width: 350px;
+
+                label {
+                    margin: 20px 0;
+                    padding-left: 10px;
+                    margin-bottom: 10px;
+                }
             }
             
-            form {
-                padding-top: 30px;
-                
-                .container {
-                    padding-left: 30px;
-                
-                    label {
-                        margin: 20px 0;
-                        padding-left: 10px;
-                    }
+            .checkboxForm {
+                padding: 25px 0 0 20px;
+
+                label {
+                    margin: 20px 0;
+                    padding-left: 10px;
+                    margin-bottom: 10px;
                 }
             }
         }
     }
 }
+
+//Footer styles ----------------------------
+footer {
+    background-color: lightblue;
+    padding: 20px 0;
+}
+
+//JS styles ----------------------------
+
+
+
+
