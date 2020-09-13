@@ -1,4 +1,3 @@
-// Set variable to capture all user inputs on radio buttons + checkboxes
 // Name space object----------------------------
 const botUserInput = {}; 
 
@@ -43,31 +42,47 @@ botUserInput.activateAlert = function () {
     // Bind event listener that looks for a click on swag inputs
     $('.swag label').on('click', function () {
 
-        // When a swag input is clicked on, activate (call) modal function
+        // When a swag input is clicked on, activate (call) alert
         if ($('.swag input').prop('disabled') === true) {
-            // alert('oops!')
             
+            // Alert conten
             swal({
-                title: 'You need a bot to rock the swag!',
-                button: 'Fine.',
+                title: 'You need a bot to rock this sweet swag!',
+                button: 'Okay.',
             });
         }
     });
 };
 
+// Create function that captures div of images that were selected on inputs
+botUserInput.captureImg = function() {
 
-// Create function to download selected input 
-// botUserInput.downloadImg = function () {
+    $('body').on('click', function() {
 
-//     // Bind event listener that looks for a change on form inputs
-//     $("a").on("click", function () {});
-// }
+    html2canvas(document.querySelector("#capture")).then((canvas) => {
+        document.body.appendChild(canvas);
+    });
+
+    })
+}
+
+// window.open(canvas);
 
 // Initializing function
 botUserInput.init = function() {
     botUserInput.showInput();
     botUserInput.enableSwag();
     botUserInput.activateAlert();
+    botUserInput.captureImg();
+
+    // When the viewers window is less than of equal to 750 in width, alert them to move to landscape for tablet/mobile
+    if($(window).width() <= 750){
+        // add a sweet alert
+        swal({
+            title: 'Please turn your device to landscape to enjoy!',
+            button: 'Okay.',
+        });
+    }
 }
 
 // Document ready

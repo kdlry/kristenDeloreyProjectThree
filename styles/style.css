@@ -280,13 +280,13 @@ label {
 }
 
 h1 {
-  font-family: "Francois One", sans-serif;
+  font-family: "Asap Condensed", sans-serif;
   font-size: 5rem;
   text-transform: uppercase;
 }
 
 h2 {
-  font-family: "Francois One", sans-serif;
+  font-family: "Asap Condensed", sans-serif;
   font-size: 5rem;
   text-transform: uppercase;
 }
@@ -313,6 +313,7 @@ footer p {
 p.smallTxt {
   font-size: 1.6rem;
   font-style: italic;
+  color: #a1a1a1;
 }
 
 a.link,
@@ -336,6 +337,18 @@ a.link3:focus {
   color: #5accb9;
   background: #FFF;
   border: #5accb9 3px solid;
+}
+
+a.download {
+  color: #FFF;
+  margin: 0 auto;
+  padding: 30px 0 5px 0;
+  display: inline;
+}
+
+a.download:hover, a.download:focus {
+  color: #66f2db;
+  border-bottom: #66f2db 3px solid;
 }
 
 .displayLink {
@@ -566,7 +579,7 @@ main .mainContainer .displayContainer .botDisplay .botImages .dayScene {
 
 main .mainContainer .displayContainer .botDisplay .botImages .swagTopHat {
   width: 18.5%;
-  left: 58px;
+  left: 57px;
   bottom: 200px;
   position: absolute;
   z-index: 20;
@@ -610,7 +623,7 @@ main .mainContainer .displayContainer .botDisplay .botImages .swagShoes {
 }
 
 main .mainContainer .displayContainer .botDisplay .botImages .default {
-  border: grey 4px solid;
+  position: relative;
   z-index: 1;
 }
 

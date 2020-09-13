@@ -39,8 +39,17 @@ footer p {
 p.smallTxt {
     font-size: 1.6rem;
     font-style: italic;
+    color: $darkBackgroundColour;
 }
 
+// .botImages p {
+//     font-size: 8rem;
+//     letter-spacing: 5px;
+//     line-height: 50px;
+//     text-transform: uppercase;
+//     color: $darkBackgroundColour;
+//     height: 100%;
+// }
 
 a.link,
 a.link2,
@@ -57,6 +66,18 @@ a.link3 {
         color: $linkColour;
         background: $primaryColour;
         border: $linkColour 3px solid;
+    }
+}
+
+a.download {
+    color: $primaryColour;
+    margin: 0 auto;
+    padding: 30px 0 5px 0;
+    display: inline;
+
+    &:hover, &:focus {
+        color: $secondaryColour;
+        border-bottom: $secondaryColour 3px solid;
     }
 }
 
@@ -294,7 +315,7 @@ main {
                     }
         
                     .swagTopHat {
-                        @include imgs(18.5%, 58px, 200px);
+                        @include imgs(18.5%, 57px, 200px);
                         z-index: 20;
                         display: none;
                     }
@@ -326,9 +347,17 @@ main {
                     .default {
                         // @include imgs(950px, 54px, 32px); 
                         // height: 600px;
-                        border: grey 4px solid;
+                        // border: grey 4px solid;
+                        position: relative;
                         z-index: 1;
-                    }    
+                    }
+                    
+                    // p {
+                    //     position: absolute;
+                    //     z-index: 2;
+                    //     top: 100px;
+                    //     left: 60px;
+                    // }
 
                     .show {
                         display: block;
