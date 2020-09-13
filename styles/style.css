@@ -316,7 +316,9 @@ p.smallTxt {
   color: #a1a1a1;
 }
 
-a.link,
+a.headerLink,
+a.mainLink,
+a.screenCap,
 a.link2,
 a.link3 {
   background: #5accb9;
@@ -325,11 +327,13 @@ a.link3 {
   font-weight: 700;
   color: #FFF;
   padding: 15px 20px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
 }
 
-a.link:hover, a.link:focus,
+a.headerLink:hover, a.headerLink:focus,
+a.mainLink:hover,
+a.mainLink:focus,
+a.screenCap:hover,
+a.screenCap:focus,
 a.link2:hover,
 a.link2:focus,
 a.link3:hover,
@@ -339,28 +343,34 @@ a.link3:focus {
   border: #5accb9 3px solid;
 }
 
-a.download {
-  color: #FFF;
-  margin: 0 auto;
-  padding: 30px 0 5px 0;
-  display: inline;
+a.headerLink {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
-a.download:hover, a.download:focus {
-  color: #66f2db;
-  border-bottom: #66f2db 3px solid;
+.displayLinks {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.displayLink {
-  text-align: center;
+.displayLinks a.screenCap {
+  padding: 20px;
+  border: 1px #5accb9 solid;
+  border-radius: 50%;
+  margin-top: 20px;
 }
 
-.displayLink a.link2 {
-  margin-top: 75px;
+.displayLinks a.screenCap span {
+  font-size: 2rem;
 }
 
-.displayLink a.link2 span,
-.displayLink a.link3 span {
+.displayLinks a.link2 {
+  margin-top: 50px;
+}
+
+.displayLinks a.link2 span,
+.displayLinks a.link3 span {
   padding-left: 10px;
   font-size: 2rem;
 }
@@ -629,6 +639,16 @@ main .mainContainer .displayContainer .botDisplay .botImages .default {
 
 main .mainContainer .displayContainer .botDisplay .botImages .show {
   display: block;
+}
+
+main .mainContainer .displayContainer .displayLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main .mainContainer .botInputs {

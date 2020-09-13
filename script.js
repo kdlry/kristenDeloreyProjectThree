@@ -54,19 +54,58 @@ botUserInput.activateAlert = function () {
     });
 };
 
-// Create function that captures div of images that were selected on inputs
+
+// Credit for code below: http://html2canvas.hertzen.com/
+// Create function that captures div of images selected on inputs
 botUserInput.captureImg = function() {
 
+    // Bind event listener that looks for a click on ?????
     $('body').on('click', function() {
 
-    html2canvas(document.querySelector("#capture")).then((canvas) => {
-        document.body.appendChild(canvas);
-    });
-
+        
+        html2canvas(document.querySelector('#capture')).then((canvas) => {
+            document.body.appendChild(canvas);
+        });
     })
 }
 
-// window.open(canvas);
+// botUserInput.captureImg = function() {
+//     // Bind event listener that looks for a click on ?????
+//     $('a.screenCap').on('click', function(e) {
+//         e.preventDefault();
+//         console.log('works');
+//         // Bind event listener that looks for a click on ?????
+//         html2canvas(document.querySelector('#capture')).then((canvas) => {
+//             document.body.appendChild(canvas);
+//         });
+//     })
+// }
+
+// let element = document.getElementById("#capture");
+
+// botUserInput.captureImg = function() {
+//     $('a.screenCap').on('click', function(e) {
+//     e.preventDefault();
+
+//         html2canvas(element, {allowTaint: true}).then(function(canvas) {
+//             // Convert the canvas to blob
+//             canvas.toBlob(function(blob){
+//                 // To download directly on browser default 'downloads' location
+//                 let link = document.createElement("a");
+//                 document.body.appendChild(link);
+//                 link.download = "html_image.png";
+//                 link.href = canvas.toDataURL("image/png");
+//                 link.target = "_blank";
+//                 link.click();
+        
+//                 // To save manually somewhere in file explorer
+//                 // window.saveAs(blob, 'image.png');
+        
+//             },'image/png');
+//         });
+//     });
+// }
+
 
 // Initializing function
 botUserInput.init = function() {
