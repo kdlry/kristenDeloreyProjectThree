@@ -365,6 +365,17 @@ a.headerLink {
   font-size: 2rem;
 }
 
+.displayLinks a.screenCap .showModal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+}
+
 .displayLinks a.link2 {
   margin-top: 50px;
 }
@@ -561,7 +572,6 @@ main .mainContainer .displayContainer .botDisplay {
 }
 
 main .mainContainer .displayContainer .botDisplay .botImages {
-  border: lightgray 4px solid;
   margin: 0 auto;
   position: relative;
 }
@@ -578,7 +588,6 @@ main .mainContainer .displayContainer .botDisplay .botImages .mintBot {
   display: none;
 }
 
-main .mainContainer .displayContainer .botDisplay .botImages .rainScene,
 main .mainContainer .displayContainer .botDisplay .botImages .nightScene,
 main .mainContainer .displayContainer .botDisplay .botImages .dayScene {
   width: 100%;
@@ -751,6 +760,13 @@ footer {
   padding-top: 0;
 }
 
+#capturedImage {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-top: 50px;
+}
+
 @media (max-width: 1300px) {
   .mainContainer {
     -webkit-box-orient: vertical;
@@ -772,7 +788,7 @@ footer {
 }
 
 @media (max-width: 880px) {
-  .mainContainer .botDisplay .botDetaulf {
+  .mainContainer .botDisplay .botDetault {
     height: 300px;
     width: 500px;
   }

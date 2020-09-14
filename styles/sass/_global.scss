@@ -42,15 +42,6 @@ p.smallTxt {
     color: $darkBackgroundColour;
 }
 
-// .botImages p {
-//     font-size: 8rem;
-//     letter-spacing: 5px;
-//     line-height: 50px;
-//     text-transform: uppercase;
-//     color: $darkBackgroundColour;
-//     height: 100%;
-// }
-
 a.headerLink,
 a.mainLink,
 a.screenCap,
@@ -87,6 +78,13 @@ a.headerLink {
         span {
             font-size: 2rem;
         }
+
+        .showModal {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1.0);
+            transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+        }
     }
 
     a.link2 {
@@ -112,7 +110,7 @@ footer a {
 
 
 //Input styles ----------------------------
-// Code reference for radio/checkbox styling: https://www.templatemonster.com/blog/style-checkboxes-radio-buttons-css/
+// Credit for radio/checkbox styling: https://www.templatemonster.com/blog/style-checkboxes-radio-buttons-css/
 .botInputs {
     input[type="radio"],
     input[type="checkbox"]{
@@ -285,7 +283,7 @@ main {
                     // background-size: contain;
                     // height: 490px;
                     // width: 750px;
-                    border:  lightgray 4px solid;
+                    // border:  lightgray 4px solid;
                     margin: 0 auto;
                     position: relative;
                     
@@ -298,7 +296,6 @@ main {
                         display: none;
                     }
 
-                    .rainScene,
                     .nightScene,
                     .dayScene {
                         width: 100%;
@@ -428,17 +425,17 @@ footer {
     padding: 20px 0;
 }
 
+// JS dynamic elements ----------------------------
 // Sweet alert styles ----------------------------
-
-// Swal title-----
-.swal-title{
+// Swal title -----
+.swal-title {
     font-size: 2rem;
     font-family: $primaryFont;
     font-weight: 400px;
 }
 
-// Swal button-----
-.swal-button{
+// Swal button -----
+.swal-button {
     background: $secondaryColour;
     letter-spacing: 3px;
     font-weight: 700;
@@ -452,19 +449,24 @@ footer {
     }
 }
 
-// change the colour of the buttons
+// Button on on hover/focus-----
 .swal-button:not([disabled]):hover,
 .swal-button:not([disabled]):focus{
     background-color: $secondaryColour;
     cursor: pointer;
 }
 
-// center the button | change spacing around it
-.swal-footer{
+// Center the button and adjust spacing-----
+.swal-footer {
     text-align: center;
     margin-top: 0;
     padding-top: 0;
 }
 
+// Captured image styles ----------------------------
+#capturedImage {
+    align-self: center;
+    padding-top: 50px;
+}
 
 

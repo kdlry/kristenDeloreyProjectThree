@@ -8,7 +8,7 @@ const botUserInput = {};
 botUserInput.showInput = function() {
 
     // Bind event listener that looks for a change on all form inputs
-    $('input').on('change', function(){
+    $('input').on('change', function() {
     
         // Create variable that stores selected input with an id
         let val = this.id;
@@ -22,6 +22,34 @@ botUserInput.showInput = function() {
         // Toggle class on inputs to view and hide images on demand (checkboxes)
         selectedInput.toggleClass('show');
     }); 
+}
+
+// Create function to reset form input and clear images from display
+botUserInput.resetInputs = function() {
+
+    // Bind event listener that looks for a click on reset button
+    $('button').on('click', function() {
+        
+        // Remove checked from inputs that were checked
+        $('input').prop('checked', false);
+        
+        // Remove the class of show from all images in the .botImages div
+        $('.mintBot').removeClass('show');
+        $('.peachBot').removeClass('show');
+        $('.violetBot').removeClass('show');
+        $(".rosetBot").removeClass("show");
+        $(".dayScene").removeClass("show");
+        $(".nightScene").removeClass("show");
+        $(".swagTopHat").removeClass("show");
+        $(".swagShades").removeClass("show");
+        $(".swagIceCream").removeClass("show");
+        $(".swagChain").removeClass("show");
+        $(".swagShoes").removeClass("show");
+
+        $(".chk").prop("disabled", true);
+
+        $("body").find("canvas").remove();
+    })
 }
 
 // Create function that enables swag inputs once a swatch has been selected
@@ -45,71 +73,47 @@ botUserInput.activateAlert = function () {
         // When a swag input is clicked on, activate (call) alert
         if ($('.swag input').prop('disabled') === true) {
             
-            // Alert conten
+            // Alert content
             swal({
                 title: 'You need a bot to rock this sweet swag!',
-                button: 'Okay.',
+                button: 'Got it.',
             });
         }
     });
 };
 
 
+// for modal
+// document.querySelector('#modal').appendChild(canvas); give the div an id of modal
+
 // Credit for code below: http://html2canvas.hertzen.com/
 // Create function that captures div of images selected on inputs
 botUserInput.captureImg = function() {
 
-    // Bind event listener that looks for a click on ?????
-    $('body').on('click', function() {
+    // Bind event listener that looks for a click on the camera icon
+    $('.screenCap').on('click', function(e) {
+        e.preventDefault();
+        // botUserInput.modal();
 
+        // Move the scroll on top of page (this is a necessary step to carry out html2canvas script)
+        window.scrollTo(0, 0);
+
+        // Convert the div to an image (canvas) and append to the bottom of the body
+        html2canvas(document.getElementById("capture")).then(function (canvas) {
         
-        html2canvas(document.querySelector('#capture')).then((canvas) => {
-            document.body.appendChild(canvas);
+            // document.querySelector("footer").appendChild(canvas);
+            document.getElementById("capturedImage").appendChild(canvas);
+
+            let element = (canvas);
+            element.scrollIntoView();
         });
     })
 }
 
-// botUserInput.captureImg = function() {
-//     // Bind event listener that looks for a click on ?????
-//     $('a.screenCap').on('click', function(e) {
-//         e.preventDefault();
-//         console.log('works');
-//         // Bind event listener that looks for a click on ?????
-//         html2canvas(document.querySelector('#capture')).then((canvas) => {
-//             document.body.appendChild(canvas);
-//         });
-//     })
-// }
-
-// let element = document.getElementById("#capture");
-
-// botUserInput.captureImg = function() {
-//     $('a.screenCap').on('click', function(e) {
-//     e.preventDefault();
-
-//         html2canvas(element, {allowTaint: true}).then(function(canvas) {
-//             // Convert the canvas to blob
-//             canvas.toBlob(function(blob){
-//                 // To download directly on browser default 'downloads' location
-//                 let link = document.createElement("a");
-//                 document.body.appendChild(link);
-//                 link.download = "html_image.png";
-//                 link.href = canvas.toDataURL("image/png");
-//                 link.target = "_blank";
-//                 link.click();
-        
-//                 // To save manually somewhere in file explorer
-//                 // window.saveAs(blob, 'image.png');
-        
-//             },'image/png');
-//         });
-//     });
-// }
-
-
 // Initializing function
 botUserInput.init = function() {
     botUserInput.showInput();
+    botUserInput.resetInputs();
     botUserInput.enableSwag();
     botUserInput.activateAlert();
     botUserInput.captureImg();

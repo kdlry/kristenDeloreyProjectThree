@@ -36,12 +36,10 @@
             </div>
 
             <div class="headerBorder"></div>
-                    
-            <h1>meet bot.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda nihil veniam enim? Aperiam dicta, ut quas velit eligendi quaerat veniam!</p>
-            <a class="headerLink" href="#mainContent">More info</a>
-            
-        </div>
+                <h1>meet bot.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda nihil veniam enim? Aperiam dicta, ut quas velit eligendi quaerat veniam!</p>
+                <a class="headerLink" href="#mainContent">More info</a>
+            </div>
     </header>
     <!-- Header end ---------------------------- -->
     
@@ -131,22 +129,22 @@
 
                                 <div class="default dwnld">
                                     <img src="./assets/defaultScene.png" alt="Pixelated grey bot in a blank default scene">
-                                    <!-- <p>land of</p>
-                                    <p>the bots</p> -->
                                 </div>
-                            </div>  
+                            </div>
                         
                     </div>
 
                     <div class=displayLinks>
-                        <a class="screenCap" href="" arria-label="click here to take a screen cap of the selected inputs once displayed"><span><i class="fas fa-camera"></i></span></a>
+                        <a class="screenCap trigger" href="" arria-label="click here to take a screen cap of the selected inputs once displayed"><span><i class="fas fa-camera"></i></span></a>
                         <a class="link2" href="#botInputs" arria-hidden="true">View inputs<span><i class="fas fa-caret-down"></i></span></a>
                     </div>
-                </section>
 
+                    <div id="capturedImage"></div>
+
+                </section>
                 
                 <!-- Bot display image inputs ---------------------------- -->
-                <section class="botInputs" id="selection"> 
+                <section class="botInputs"> 
 
                     <!-- Swatch inputs ----- -->
                     <div class="swatch" id="botInputs">
@@ -154,16 +152,16 @@
                         <p>Select a bot</p>
                         <form class="radioForm">
                             
-                            <input class="input" id="mintBot" type="radio" value="mint" name="bot" aria-hidden="true">
+                            <input id="mintBot" type="radio" value="mint" name="bot" aria-hidden="true">
                             <label for="mintBot" aria-label="Click to select a mint bot"><span class="radio"></span>mint</label>
                         
-                            <input class="input" id="peachBot" type="radio" value="peach" name="bot" aria-hidden="true">
+                            <input id="peachBot" type="radio" value="peach" name="bot" aria-hidden="true">
                             <label for="peachBot" aria-label="Click to select a peach bot"><span class="radio"></span>peach</label>
                         
-                            <input class="input" id="violetBot" type="radio" value="violet" name="bot" aria-hidden="true">
+                            <input id="violetBot" type="radio" value="violet" name="bot" aria-hidden="true">
                             <label for="violetBot" aria-label="Click to select a violet bot"><span class="radio"></span>violet</label>
                         
-                            <input class="input" id="roseBot" type="radio" value="rose" name="bot" aria-hidden="true">
+                            <input id="roseBot" type="radio" value="rose" name="bot" aria-hidden="true">
                             <label for="roseBot" aria-label="Click to select a rose bot"><span class="radio"></span>rose</label>
 
                         </form>
@@ -175,10 +173,10 @@
                         <p>Choose a scene</p>
                         <form class="radioForm">
                             
-                            <input class="input" id="dayScene" type="radio" value="day" name="scene" aria-hidden="true">    
+                            <input id="dayScene" type="radio" value="day" name="scene" aria-hidden="true">    
                             <label for="dayScene" aria-label="Click to switch to the day scene"><span class="radio"></span>day</label>
                         
-                            <input class="input" id="nightScene" type="radio" value="night" name="scene" aria-hidden="true">
+                            <input id="nightScene" type="radio" value="night" name="scene" aria-hidden="true">
                             <label for="nightScene" aria-label="Click to switch to the night scene"><span class="radio"></span>night</label>
                             
                         </form>
@@ -190,34 +188,34 @@
                         <p>Add swag</p>
                         <form class="checkboxForm">
                             <div >
-                                <input class="input" id="swagTopHat" type="checkbox" value="topHat" aria-hidden="true" disabled>
+                                <input class="chk" id="swagTopHat" type="checkbox" value="topHat" aria-hidden="true" disabled>
                                 <label for="swagTopHat" aria-label="Click to put on a top hat"><span class="checkbox"></span>top hat</label>
                             </div>
 
                             <div >
-                                <input class="input nightPair" id="swagShades" type="checkbox" value="shades" aria-hidden="true" disabled>
+                                <input class="chk" id="swagShades" type="checkbox" value="shades" aria-hidden="true" disabled>
                                 <label for="swagShades" aria-label="Click to wear some shades"><span class="checkbox"></span>shades</label>
                             </div>
 
                             <div >
-                                <input class="input rainPair" id="swagIceCream" type="checkbox" value="iceCream" aria-hidden="true" disabled>
+                                <input class="chk" id="swagIceCream" type="checkbox" value="iceCream" aria-hidden="true" disabled>
                                 <label for="swagIceCream" aria-label="Click to hold an ice cream cone"><span class="checkbox"></span>ice cream</label>
                             </div>
 
                             <div>
-                                <input class="input" id="swagChain" type="checkbox" value="chain" aria-hidden="true" disabled>
+                                <input class="chk" id="swagChain" type="checkbox" value="chain" aria-hidden="true" disabled>
                                 <label for="swagChain" aria-label="Click to wear a chain necklace"><span class="checkbox"></span>gold chain</label>
                             </div>
 
                             <div>
-                                <input class="input" id="swagShoes" type="checkbox" value="shoes" aria-hidden="true" disabled>
+                                <input class="chk" id="swagShoes" type="checkbox" value="shoes" aria-hidden="true" disabled>
                                 <label for="swagShoes" aria-label="Click to put on a pair of shoes"><span class="checkbox"></span>fresh kicks</label>
                             </div>
                         </form>
                     </div>
                     
                 </section>
-
+                <button type="button">Reset forms and clear display</button>
                 <div class=displayLinks>
                     <a class="link3" href="#botDisplay" arria-hidden="true">View image<span><i class="fas fa-caret-up"></i></span></a>
                 </div>    
