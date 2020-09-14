@@ -1,14 +1,24 @@
 //Variables and mixins ----------------------------
-//Colour -----
+//Fonts -----
 $primaryFont: 'Nanum Gothic', sans-serif;
 $secondaryFont: 'Asap Condensed', sans-serif;
 
 //Colour -----
-$darkBackgroundColour: #a1a1a1;
-$lightBackgroundColour: #c4c4c4;
-$mainBackgroundColour: #636578;
-$primaryColour: #FFF;
-$secondaryColour: #66f2db;
+//Background -----
+$headerBackgroundColourLight: #829499;
+$headerBackgroundColourDark: #50666b;
+
+//Main -----
+$mainBackgroundColourLight: #bfd6db;
+$mainBackgroundColourDark: #637d83;
+
+//Footer -----
+$footerBackgroundColour: #4d4d4d;
+
+//Text, link, forms -----
+$primaryColour: #f3f3f3;
+$secondaryColour: #5accb9;
+$tertiaryColour: #646464;
 $linkColour: #5accb9;
 $formInputBackground: #6C788A;
 

@@ -294,7 +294,7 @@ h2 {
 h3 {
   font-size: 5rem;
   font-weight: 700;
-  color: #66f2db;
+  color: #428f83;
   text-transform: uppercase;
 }
 
@@ -305,15 +305,19 @@ p {
   line-height: 26px;
 }
 
+.botInputs p {
+  color: #646464;
+}
+
 footer p {
+  font-size: 1.6rem;
   text-align: center;
-  color: dimgrey;
 }
 
 p.smallTxt {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  color: #d3d3d3;
   font-style: italic;
-  color: #a1a1a1;
 }
 
 a.headerLink,
@@ -325,7 +329,7 @@ a.link3 {
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #FFF;
+  color: #f3f3f3;
   padding: 15px 20px;
 }
 
@@ -339,7 +343,7 @@ a.link2:focus,
 a.link3:hover,
 a.link3:focus {
   color: #5accb9;
-  background: #FFF;
+  background: #f3f3f3;
   border: #5accb9 3px solid;
 }
 
@@ -365,17 +369,6 @@ a.headerLink {
   font-size: 2rem;
 }
 
-.displayLinks a.screenCap .showModal {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
-}
-
 .displayLinks a.link2 {
   margin-top: 50px;
 }
@@ -396,6 +389,22 @@ footer a:hover, footer a:focus {
   border-bottom: #EA593E solid 2px;
 }
 
+button {
+  background: #409284;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #f3f3f3;
+  border: none;
+  padding: 10px 30px;
+  margin-bottom: 40px;
+}
+
+button:hover, button:focus {
+  color: #409284;
+  background: #f3f3f3;
+  border: #409284 3px solid;
+}
+
 .botInputs input[type="radio"],
 .botInputs input[type="checkbox"] {
   visibility: visible;
@@ -403,21 +412,21 @@ footer a:hover, footer a:focus {
 }
 
 .botInputs input:disabled + label {
-  color: darkgrey;
+  color: #aaaaaa;
 }
 
 .botInputs input[type="radio"]:checked + label span.radio::after {
   left: -27px;
-  background-color: #66f2db;
+  background-color: #77fce1;
 }
 
 .botInputs input[type="checkbox"]:checked + label span.checkbox::after {
-  color: #66f2db;
+  color: #77fce1;
 }
 
 .botInputs input[type=checkbox]:focus + label,
 .botInputs input[type=radio]:focus + label {
-  border: 3px solid #c4c4c4;
+  border: 3px solid #f3f3f3;
   border-radius: 5px;
   padding: 2px;
 }
@@ -425,6 +434,7 @@ footer a:hover, footer a:focus {
 .botInputs label {
   font-size: 2.2rem;
   position: relative;
+  color: #646464;
 }
 
 .botInputs label span::before,
@@ -445,7 +455,7 @@ footer a:hover, footer a:focus {
 }
 
 .botInputs label span.radio:hover::before {
-  border: 3px solid #c4c4c4;
+  border: 3px solid #bfd6db;
 }
 
 .botInputs label span.radio::after {
@@ -475,7 +485,7 @@ footer a:hover, footer a:focus {
 }
 
 .botInputs label span.checkbox:hover::before {
-  border: 3px solid #c4c4c4;
+  border: 3px solid #bfd6db;
 }
 
 .botInputs label span.checkbox::after {
@@ -490,8 +500,8 @@ footer a:hover, footer a:focus {
 
 header {
   height: 100vh;
-  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #a8b2bf), color-stop(60%, #8c939c));
-  background: linear-gradient(90deg, #a8b2bf 60%, #8c939c 60%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #829499), color-stop(45%, #50666b));
+  background: linear-gradient(90deg, #829499 60%, #50666b 45%);
 }
 
 header .headerContainer {
@@ -521,7 +531,7 @@ header .headerContainer .headerBots img {
 }
 
 header .headerContainer .headerBorder {
-  border-bottom: #FFF 3px solid;
+  border-bottom: #f3f3f3 3px solid;
   width: 80%;
 }
 
@@ -540,7 +550,7 @@ header .headerContainer p {
 
 main {
   height: 100%;
-  background: #636578;
+  background: #637d83;
 }
 
 main .mainContainer {
@@ -556,8 +566,7 @@ main .mainContainer .mainIntro p {
 }
 
 main .mainContainer .displayContainer {
-  border: lightgrey 5px solid;
-  background: #666666;
+  background: #bfd6db;
   padding: 50px 0;
 }
 
@@ -666,9 +675,10 @@ main .mainContainer .botInputs {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-top: 75px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 50px;
 }
 
 main .mainContainer .botInputs h3 {
@@ -677,7 +687,7 @@ main .mainContainer .botInputs h3 {
 
 main .mainContainer .botInputs p {
   padding-bottom: 20px;
-  border-bottom: solid #FFF 2px;
+  border-bottom: solid #428f83 3px;
 }
 
 main .mainContainer .botInputs .swatch,
@@ -694,7 +704,15 @@ main .mainContainer .botInputs .swag {
   width: 300px;
   text-align: left;
   padding-bottom: 50px;
-  padding-right: 50px;
+}
+
+main .mainContainer .botInputs .swatch,
+main .mainContainer .botInputs .scene {
+  margin-right: 50px;
+}
+
+main .mainContainer .botInputs .swatch {
+  margin-left: 30px;
 }
 
 main .mainContainer .botInputs .radioForm {
@@ -725,7 +743,7 @@ main .mainContainer .botInputs .checkboxForm label {
 }
 
 footer {
-  background-color: lightblue;
+  background-color: #4d4d4d;
   padding: 20px 0;
 }
 
@@ -736,21 +754,22 @@ footer {
 }
 
 .swal-button {
-  background: #66f2db;
+  background: #5accb9;
   letter-spacing: 3px;
   font-weight: 700;
+  color: #f3f3f3;
   padding: 15px 20px;
 }
 
 .swal-button:hover, .swal-button:focus {
   color: #5accb9;
-  background: #FFF;
+  background: #f3f3f3;
   border: #5accb9 3px solid;
 }
 
 .swal-button:not([disabled]):hover,
 .swal-button:not([disabled]):focus {
-  background-color: #66f2db;
+  background-color: #5accb9;
   cursor: pointer;
 }
 
@@ -762,9 +781,21 @@ footer {
 
 #capturedImage {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 1300px) {
