@@ -7,20 +7,20 @@
 
 h1 {
     font-family: $secondaryFont;
-    font-size: 5rem;
+    font-size: calc(4rem + 2.5vw);
     text-transform: uppercase;
 }
 
 h2 {
     font-family: $secondaryFont;
-    font-size: 5rem;
+    font-size: calc(3.5rem + 2vw);
     text-transform: uppercase;
 }
 
 h3 {
-    font-size: 5rem;
+    font-size: calc(3.5rem + 1.5vw);
     font-weight: 700;
-    color: #428f83;
+    color: #328b87;
     text-transform: uppercase;
 }
 
@@ -32,6 +32,7 @@ p {
 }
 
 .botInputs p {
+    font-size: 2rem;
     color: $tertiaryColour;
 }
 
@@ -259,7 +260,7 @@ header {
         p {
             text-align: right;
             align-self: flex-end;
-            width: 400px;
+            max-width: 400px;
             padding: 50px 0;
         }
     }
@@ -290,19 +291,13 @@ main {
                 flex-direction: column;
     
                 .botImages {
-                    // background-image: url(../assets/defaultScene.png);
-                    // background-repeat: no-repeat;
-                    // background-size: contain;
-                    // height: 490px;
-                    // width: 750px;
-                    // border:  lightgray 4px solid;
                     margin: 0 auto;
                     position: relative;
                     
                     .violetBot,
                     .roseBot,
                     .peachBot,
-                    .mintBot {
+                    .iceBot {
                         @include imgs(30.5%, 19px, 0px);
                         z-index: 10;
                         display: none;
@@ -366,8 +361,8 @@ main {
         .botInputs {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            padding-top: 50px;
+            justify-content: space-between;
+            padding: 50px 100px 0 100px;
 
             h3 {
                 padding-bottom: 15px;
@@ -375,7 +370,7 @@ main {
 
             p {
                 padding-bottom: 20px;
-                border-bottom: solid #428f83 3px;
+                border-bottom: solid #328b87 3px;
             }
 
             .swatch,
@@ -384,24 +379,9 @@ main {
                 display: flex;
                 flex-direction: column;
                 min-width: 250px;
-                width: 300px;
                 text-align: left;
                 padding-bottom: 50px;
             }
-
-            .swatch,
-            .scene {
-                margin-right: 50px;
-            }
-
-            .swatch {
-                margin-left: 30px;
-            }
-
-            // form {
-            //     // min-width: 300px;
-            //     // max-width: 350px;
-            // }
 
             .radioForm {
                 display: flex;
@@ -439,7 +419,7 @@ footer {
 // Sweet alert styles ----------------------------
 // Swal title -----
 .swal-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: $primaryFont;
     font-weight: 400px;
 }
@@ -463,6 +443,7 @@ footer {
 .swal-button:not([disabled]):hover,
 .swal-button:not([disabled]):focus{
     background-color: $secondaryColour;
+    color: $primaryColour;
     cursor: pointer;
 }
 
@@ -474,11 +455,10 @@ footer {
 }
 
 // Captured image styles ----------------------------
-#capturedImage {
+#capturedImg {
     align-self: center;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }

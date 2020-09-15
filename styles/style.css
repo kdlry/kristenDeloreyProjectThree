@@ -281,20 +281,20 @@ label {
 
 h1 {
   font-family: "Asap Condensed", sans-serif;
-  font-size: 5rem;
+  font-size: calc(4rem + 2.5vw);
   text-transform: uppercase;
 }
 
 h2 {
   font-family: "Asap Condensed", sans-serif;
-  font-size: 5rem;
+  font-size: calc(3.5rem + 2vw);
   text-transform: uppercase;
 }
 
 h3 {
-  font-size: 5rem;
+  font-size: calc(3.5rem + 1.5vw);
   font-weight: 700;
-  color: #428f83;
+  color: #328b87;
   text-transform: uppercase;
 }
 
@@ -306,6 +306,7 @@ p {
 }
 
 .botInputs p {
+  font-size: 2rem;
   color: #646464;
 }
 
@@ -544,7 +545,7 @@ header .headerContainer p {
   text-align: right;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  width: 400px;
+  max-width: 400px;
   padding: 50px 0;
 }
 
@@ -588,7 +589,7 @@ main .mainContainer .displayContainer .botDisplay .botImages {
 main .mainContainer .displayContainer .botDisplay .botImages .violetBot,
 main .mainContainer .displayContainer .botDisplay .botImages .roseBot,
 main .mainContainer .displayContainer .botDisplay .botImages .peachBot,
-main .mainContainer .displayContainer .botDisplay .botImages .mintBot {
+main .mainContainer .displayContainer .botDisplay .botImages .iceBot {
   width: 30.5%;
   left: 19px;
   bottom: 0px;
@@ -675,10 +676,10 @@ main .mainContainer .botInputs {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 100px 0 100px;
 }
 
 main .mainContainer .botInputs h3 {
@@ -687,7 +688,7 @@ main .mainContainer .botInputs h3 {
 
 main .mainContainer .botInputs p {
   padding-bottom: 20px;
-  border-bottom: solid #428f83 3px;
+  border-bottom: solid #328b87 3px;
 }
 
 main .mainContainer .botInputs .swatch,
@@ -701,18 +702,8 @@ main .mainContainer .botInputs .swag {
       -ms-flex-direction: column;
           flex-direction: column;
   min-width: 250px;
-  width: 300px;
   text-align: left;
   padding-bottom: 50px;
-}
-
-main .mainContainer .botInputs .swatch,
-main .mainContainer .botInputs .scene {
-  margin-right: 50px;
-}
-
-main .mainContainer .botInputs .swatch {
-  margin-left: 30px;
 }
 
 main .mainContainer .botInputs .radioForm {
@@ -748,7 +739,7 @@ footer {
 }
 
 .swal-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 400px;
 }
@@ -770,6 +761,7 @@ footer {
 .swal-button:not([disabled]):hover,
 .swal-button:not([disabled]):focus {
   background-color: #5accb9;
+  color: #f3f3f3;
   cursor: pointer;
 }
 
@@ -779,7 +771,7 @@ footer {
   padding-top: 0;
 }
 
-#capturedImage {
+#capturedImg {
   -ms-flex-item-align: center;
       align-self: center;
   padding-top: 50px;
@@ -793,34 +785,113 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-@media (max-width: 1300px) {
-  .mainContainer {
+@media (max-width: 999px) {
+  main .mainContainer .botInputs {
+    padding: 50px 100px 0 100px;
+  }
+  main .mainContainer .botInputs .swatch,
+  main .mainContainer .botInputs .scene,
+  main .mainContainer .botInputs .swag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .mainContainer .botInput, .mainContainer .botDisplay {
     width: 100%;
-  }
-  .mainContainer .botInput form, .mainContainer .botDisplay form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    text-align: left;
+    padding-bottom: 50px;
   }
 }
 
-@media (max-width: 880px) {
-  .mainContainer .botDisplay .botDetault {
-    height: 300px;
-    width: 500px;
+@media (max-width: 745px) {
+  header .headerContainer .headerBots {
+    width: 450px;
+  }
+  header .headerContainer .headerBots img {
+    width: 70%;
+  }
+  main .mainContainer .displayContainer .botDisplay {
+    height: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0 auto;
+  }
+  main .mainContainer .displayContainer .botDisplay .botImages {
+    height: 250px;
+    width: 450px;
+  }
+  main .mainContainer .displayContainer .botDisplay .botImages .violetBot,
+  main .mainContainer .displayContainer .botDisplay .botImages .roseBot,
+  main .mainContainer .displayContainer .botDisplay .botImages .peachBot,
+  main .mainContainer .displayContainer .botDisplay .botImages .iceBot {
+    width: 30.5%;
+    left: 14px;
+    bottom: -25px;
+    position: absolute;
+  }
+  main .mainContainer .displayContainer .botDisplay .botImages .swagTopHat {
+    width: 18.5%;
+    left: 41px;
+    bottom: 117px;
+    position: absolute;
+    z-index: 20;
+  }
+  main .mainContainer .displayContainer .botDisplay .botImages .swagShades {
+    width: 12.8%;
+    left: 54px;
+    bottom: 97px;
+    position: absolute;
+    z-index: 30;
+  }
+  main .mainContainer .displayContainer .botDisplay .botImages .swagIceCream {
+    width: 5.8%;
+    left: 130px;
+    bottom: 59px;
+    position: absolute;
+    z-index: 20;
+  }
+  main .mainContainer .displayContainer .botDisplay .botImages .swagChain {
+    width: 12.5%;
+    left: 55px;
+    bottom: 55px;
+    position: absolute;
+    z-index: 20;
+  }
+  main .mainContainer .displayContainer .botDisplay .botImages .swagShoes {
+    width: 21%;
+    left: 33px;
+    bottom: -25px;
+    position: absolute;
+    z-index: 20;
+  }
+  main .mainContainer .displayContainer .botDisplay .displayLinks {
+    margin-top: 50px;
+  }
+  main .mainContainer .displayContainer .botDisplay .displayLinks a.link2 {
+    margin-top: 20px;
+  }
+  main .mainContainer .displayContainer .botDisplay #capturedImg {
+    padding-bottom: 30px;
+  }
+  main .mainContainer .displayContainer .botInputs {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 650px) {
+  header .headerContainer .headerBots img {
+    display: none;
+  }
+  main .mainContainer .botDisplay {
+    height: 100%;
+  }
+  main .mainContainer .botInputs {
+    padding-left: 75px;
+    padding-right: 75px;
   }
 }

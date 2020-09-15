@@ -1,23 +1,121 @@
-@media (max-width: 1300px) {
-    .mainContainer {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 999px) {
+    main .mainContainer {
 
-        .botInput, .botDisplay {
-            width: 100%;
-
-            form {
+        .botInputs {
+            padding: 50px 100px 0 100px;
+            
+            .swatch,
+            .scene,
+            .swag {
                 display: flex;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                padding-bottom: 50px;
             }
         }
     }
 }
 
-@media (max-width: 880px) {
-    .mainContainer .botDisplay {
-        .botDetault {
-            height: 300px;
-            width: 500px;
+@media (max-width: 745px) {
+    
+    header {
+        .headerContainer {
+            .headerBots {
+                width: 450px;
+                img {
+                    width: 70%;
+                }
+            }
+        } 
+    }
+    
+    main .mainContainer {
+        .displayContainer {
+
+            .botDisplay {
+                height: 100%;
+                align-self: center;
+                margin: 0 auto;
+    
+                .botImages {
+                    height: 250px;
+                    width: 450px;
+    
+                    .violetBot,
+                    .roseBot,
+                    .peachBot,
+                    .iceBot {
+                        @include imgs(30.5%, 14px, -25px);
+                    }
+    
+                    .swagTopHat {
+                        @include imgs(18.5%, 41px, 117px);
+                        z-index: 20;
+                    }
+    
+                    .swagShades {
+                        @include imgs(12.8%, 54px, 97px);
+                        z-index: 30;
+                    }
+                    
+                    .swagIceCream {
+                        @include imgs(5.8%, 130px, 59px);
+                        z-index: 20;
+                    }
+                    
+                    .swagChain {
+                        @include imgs(12.5%, 55px, 55px);
+                        z-index: 20;
+                    }
+                    
+                    .swagShoes {
+                        @include imgs(21%, 33px, -25px); 
+                        z-index: 20;
+                    }
+                }
+    
+    
+                .displayLinks {
+                    margin-top: 50px;
+
+                    a.link2 {
+                        margin-top: 20px;
+                    }
+                }
+
+                #capturedImg {
+                    padding-bottom: 30px;
+                }
+            }
+
+            .botInputs {
+                padding-top: 0px;
+            }
+        }
+    }
+}   
+
+//Orientation landscape
+@media (max-width: 650px) {
+    
+    header {
+        .headerContainer .headerBots {
+            img {
+                display: none;
+            }
+        }
+    }
+
+    main .mainContainer {
+        
+        .botDisplay {
+        height: 100%;
+        }
+
+        .botInputs {
+            padding-left: 75px;
+            padding-right: 75px;
         }
     }
 }

@@ -34,7 +34,7 @@ botUserInput.resetInputs = function() {
         $('input').prop('checked', false);
         
         // Remove the class of show from all images in the .botImages div
-        $('.mintBot').removeClass('show');
+        $('.iceBot').removeClass('show');
         $('.peachBot').removeClass('show');
         $('.violetBot').removeClass('show');
         $(".rosetBot").removeClass("show");
@@ -82,11 +82,9 @@ botUserInput.activateAlert = function () {
     });
 };
 
-
-// for modal
-// document.querySelector('#modal').appendChild(canvas); give the div an id of modal
-
 // Credit for code below: http://html2canvas.hertzen.com/
+// http://adnan-tech.com/save-div-as-image-html2canvas/
+
 // Create function that captures div of images selected on inputs
 botUserInput.captureImg = function() {
 
@@ -102,7 +100,7 @@ botUserInput.captureImg = function() {
         html2canvas(document.getElementById("capture")).then(function (canvas) {
         
             // document.querySelector("footer").appendChild(canvas);
-            document.getElementById("capturedImage").appendChild(canvas);
+            document.getElementById("capturedImg").appendChild(canvas);
 
             let element = (canvas);
             element.scrollIntoView();
@@ -118,12 +116,14 @@ botUserInput.init = function() {
     botUserInput.activateAlert();
     botUserInput.captureImg();
 
-    // When the viewers window is less than of equal to 750 in width, alert them to move to landscape for tablet/mobile
-    if($(window).width() <= 750){
-        // add a sweet alert
+    // When the viewer's window is less than of equal to 630 in width, alert them to move to landscape for tablet/mobile
+    if($(window).width() <= 650){
+        
+        // Display a sweet alert
         swal({
-            title: 'Please turn your device to landscape to enjoy!',
+            title: 'Turn to landscape view for a less than stellar (but better than portrait) experience!',
             button: 'Okay.',
+            onOpen: () => Swal.getConfirmButton().focus()
         });
     }
 }
