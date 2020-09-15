@@ -1,24 +1,23 @@
 // Name space object----------------------------
 const botUserInput = {}; 
 
-// Functions definiitons ----------------------------
+// Function definiitons ----------------------------
 // Create function to display images triggered by user input
 botUserInput.showInput = function() {
 
     // Bind event listener that looks for a change on all form inputs
     $('input').on('change', function() {
     
-        // Create variable that stores selected form input with an id
-        // let val = this.id;
+        // Create variable that stores selected input with an id (form inputs)
         let val = $(this).attr('id');
 
-        // Create a second variable that gets linked image class for selected form input id
+        // Create a second variable that stores selected input with equivalent class name (swatch/scene/swag images)
         let selectedInput = $(`.${val}`);
 
-        // For selected images with direct siblings, remove siblings from display and only show target image (radio buttons - botColour + botScene)
+        // For images with direct siblings, hide siblings from display and only show selected image (radio buttons - bot swatch + bot scene)
         selectedInput.siblings().removeClass('show');
 
-        // For selected images without siblings, toggle view/hide target images on demand (checkboxes - botSwag)
+        // For images without siblings, toggle view/hide for selected image (checkboxes - bot swag)
         selectedInput.toggleClass('show');
     }); 
 }
@@ -45,9 +44,8 @@ botUserInput.resetInputs = function() {
         $('.swagChain').removeClass('show');
         $('.swagShoes').removeClass('show');
 
-        // Restore disabled property on checkboxes
+        // Restore disabled property on checkbox inputs
         $('.chk').prop('disabled', true);
-
 
         //Remove canvas from display section 
         $('body').find('canvas').remove();
@@ -66,13 +64,13 @@ botUserInput.enableSwag = function() {
     });
 }
 
-// Create function that activates modal when swag inputs are selected before a swatch has been selected
+// Create function that activates alert modal when swag inputs are selected before a swatch has been selected
 botUserInput.activateAlert = function () {
     
     // Bind event listener that looks for a click on disabled swag inputs
     $('.swag label').on('click', function () {
 
-        // When a swag input is clicked on, activate the modal
+        // When a disabled swag input is selected, activate the modal
         if ($('.swag input').prop('disabled') === true) {
             
             // Alert content
@@ -94,7 +92,7 @@ botUserInput.captureImg = function() {
     $('.screenCap').on('click', function(e) {
         e.preventDefault();
 
-        // Move scroll to the top of the page (this is a required step to carry out html2canvas script below)
+        // Move scroll position to the top of the page (note: this is a required step to carry out html2canvas script below)
         window.scrollTo(0, 0);
 
         // Convert selected images in div to a canvas (captured image)
@@ -103,14 +101,14 @@ botUserInput.captureImg = function() {
             // Append canvas to the display section
             document.getElementById('capturedImg').appendChild(canvas);
 
-            // Move scroll to displayed canvas
+            // Move scroll position down to displayed canvas
             let element = (canvas);
             element.scrollIntoView();
         });
     })
 }
 
-// Initializing function
+// Initializing functions
 botUserInput.init = function() {
     botUserInput.showInput();
     botUserInput.resetInputs();
@@ -118,12 +116,12 @@ botUserInput.init = function() {
     botUserInput.activateAlert();
     botUserInput.captureImg();
 
-    // When the viewer's window is less than of equal to 630 in width, alert them to move to landscape view
+    // When the viewer's window is less than of equal to 650 in width, alert them to move to landscape view
     if($(window).width() <= 650){
         
         // Display sweet alert with custom content
         swal({
-            title: 'Turn to landscape view for a less than stellar (but better than portrait!) experience',
+            title: 'Turn to landscape view for a less than stellar (but optimal!) experience',
             button: 'Okay.',
         });
     }
