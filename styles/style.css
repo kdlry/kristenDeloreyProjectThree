@@ -809,13 +809,16 @@ footer {
 
 @media (max-width: 745px) {
   header {
-    height: 90vh;
+    height: 100%;
+  }
+  header .headerContainer {
+    padding-bottom: 50px;
   }
   header .headerContainer .headerBots {
     width: 450px;
   }
   header .headerContainer .headerBots img {
-    width: 70%;
+    display: none;
   }
   main .mainContainer .displayContainer .botDisplay {
     height: 100%;
@@ -887,12 +890,6 @@ footer {
 }
 
 @media (max-width: 650px) {
-  header {
-    height: 65vh;
-  }
-  header .headerContainer .headerBots img {
-    display: none;
-  }
   main .mainContainer .botDisplay {
     height: 100%;
   }

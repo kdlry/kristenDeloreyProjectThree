@@ -1,3 +1,5 @@
+// Media queries ----------------------------
+// Small desktop -----
 @media (max-width: 999px) {
     main .mainContainer {
 
@@ -17,20 +19,26 @@
     }
 }
 
+// Tablet -----
 @media (max-width: 745px) {
     
     header {
-        height: 90vh;
+        height: 100%;
 
         .headerContainer {
+            padding-bottom: 50px;
+
             .headerBots {
                 width: 450px;
+                
                 img {
-                    width: 70%;
+                    display: none;
                 }
             }
-        } 
-    }
+        }
+    } 
+
+
     
     main .mainContainer {
         .displayContainer {
@@ -98,18 +106,8 @@
     }
 }   
 
-//Orientation landscape
+// Landscape view
 @media (max-width: 650px) {
-    
-    header {
-        height: 65vh;
-
-        .headerContainer .headerBots {
-            img {
-                display: none;
-            }
-        }
-    }
 
     main .mainContainer {
         
