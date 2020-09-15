@@ -808,6 +808,9 @@ footer {
 }
 
 @media (max-width: 745px) {
+  header {
+    height: 90vh;
+  }
   header .headerContainer .headerBots {
     width: 450px;
   }
@@ -884,6 +887,9 @@ footer {
 }
 
 @media (max-width: 650px) {
+  header {
+    height: 65vh;
+  }
   header .headerContainer .headerBots img {
     display: none;
   }

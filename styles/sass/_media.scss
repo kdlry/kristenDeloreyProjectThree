@@ -20,6 +20,8 @@
 @media (max-width: 745px) {
     
     header {
+        height: 90vh;
+
         .headerContainer {
             .headerBots {
                 width: 450px;
@@ -100,6 +102,8 @@
 @media (max-width: 650px) {
     
     header {
+        height: 65vh;
+
         .headerContainer .headerBots {
             img {
                 display: none;
