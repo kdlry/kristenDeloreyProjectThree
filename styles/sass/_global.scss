@@ -123,8 +123,10 @@ button {
 }
 
 
-//Input styles ----------------------------
+// Form input styles ----------------------------
 // Credit for radio/checkbox styling: https://www.templatemonster.com/blog/style-checkboxes-radio-buttons-css/
+
+// Inputs + Labels -----
 .botInputs {
     input[type="radio"],
     input[type="checkbox"]{
@@ -152,13 +154,13 @@ button {
         padding: 2px;
     }
 
-
+    // Labels + span -----
     label {
         font-size: 2.2rem;
         position: relative;
         color: $tertiaryColour;
         
-        // Base styling-----
+        // Base styling -----
         span::before, 
         span::after { 
             content: '';
@@ -168,7 +170,7 @@ button {
             margin: auto;
         }
         
-        // Radio buttons-----
+        // Radio buttons -----
         span.radio {
             &::before {
                 left: -52px;
@@ -274,6 +276,7 @@ main {
     .mainContainer { 
         padding-bottom: 75px;
 
+        // Intro -----
         .mainIntro {
             padding: 100px 0;
 
@@ -282,14 +285,17 @@ main {
             }
         }
 
+        // Images + form containter -----
         .displayContainer {
             background: $mainBackgroundColourLight;
             padding: 50px 0;
 
+            // Images section -----
             .botDisplay {
                 display: flex;
                 flex-direction: column;
-    
+                
+                // Images div -----
                 .botImages {
                     margin: 0 auto;
                     position: relative;
@@ -358,6 +364,7 @@ main {
             }
         }
         
+        // Form inputs section -----
         .botInputs {
             display: flex;
             flex-wrap: wrap;
@@ -447,7 +454,7 @@ footer {
     cursor: pointer;
 }
 
-// Center the button and adjust spacing-----
+// Spacing -----
 .swal-footer {
     text-align: center;
     margin-top: 0;
