@@ -1,7 +1,7 @@
-Project link: https://kdlry.github.io/kristenDeloreyProjectThree/
+# -Description-
 
-Successes:
-Being new to JS/jQuery, there was a lot of trial and error to get some of the simplest functions to work.  I learned SO much along the way and made a few breakthroughs - including html2canvas.
+Responsive site built with jQuery, HTML5 and Sass. The primary goal is to collect a set of user inputs, including colour, scene and accessories.  These inputs will render overlapping images of our friendly neighborhood ‘Bot’ on vacation, which can then be captured in a photo.
 
-Room for Improvement:
-Cleaner (dry-er) code and getting better at responsive design - smoother transitions and fewer breakpoints.
+# -Live Link-
+
+https://kdlry.github.io/meetBot/
